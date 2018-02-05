@@ -4,10 +4,10 @@
   align-items: flex-start
   margin-bottom: 45px
 
-  +respond-to(1439px)
+  +respond-to($medium)
     margin-bottom: 30px
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     flex-direction: column
     align-items: center
     margin-bottom: 24px
@@ -16,7 +16,7 @@
   position: relative
   margin-right: 33px
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     margin-right: 0
     margin-bottom: 24px
 
@@ -26,10 +26,18 @@
   &:last-child
     margin-bottom: 0
 
-.methodology__sources
+.methodologies__sources-wrapper
+  display: flex
+  flex-direction: row
+  justify-content: space-between
   margin-left: 99px
 
-  +respond-to(779px)
+  +respond-to($xsmall)
+    margin-left: 0
+    flex-direction: column
+
+.methodology__sources
+  +respond-to($xsmall)
     margin-left: 0
     margin-bottom: 24px
 
@@ -38,6 +46,13 @@
   line-height: 20px
   font-weight: 600
   margin-bottom: 12px
+
+.methodology__sources-link
+  border-bottom: 1px solid #cbe4f0
+  cursor: pointer
+  color: #1e92cc
+  &:hover
+    border-bottom: 1px solid transparent
 
 .methodology__sources-list-item
   position: relative

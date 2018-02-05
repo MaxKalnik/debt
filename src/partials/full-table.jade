@@ -12,12 +12,12 @@ include ./table-data
 
     .breadcrumbs__item
       a.breadcrumbs__link(href='')
-        | Most At-Risk States for Credit Card Fraud and Identity Theft
+        | The Worst States and Companies for Invalid Debt Collection Activities
 
     .breadcrumbs__item
-      | CC Fraud Dataset
+      | Full State Ranking
 
-  h2.section__title CC Fraud Dataset
+  h2.section__title Full State Ranking
 
   .tables-container
     .mobile-only
@@ -42,12 +42,8 @@ include ./table-data
             th Rank
             th State
             th Population
-            th Income Per Capita
-            th CSN CC 2016
-            th %Change
-            th CSN ID Theft 2016
-            th IC3 Fraud Per Capita
-            th ID Theft Per Capita
+            th Illegal Debt Collection Complaints
+            th Per Capita
 
         tbody
           each value in values
@@ -62,22 +58,10 @@ include ./table-data
                 = value.population
 
               td
-                = value.perCapitaIncome
+                = value.debt
 
               td
-                = value.csnCC2016
-
-              td
-                = value.change
-
-              td
-                = value.csnIDtheft
-
-              td
-                = value.IC3Fraud
-
-              td
-                = value.IDtheft
+                = value.perCapita
 
   .btn-container
     a.btn-go-back(href="index.html")

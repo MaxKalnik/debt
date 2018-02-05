@@ -6,7 +6,7 @@ button
   justify-content: center
   margin-top: 32px
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     margin: 4px 12px 0 12px
 
 .btn__main
@@ -22,15 +22,8 @@ button
   cursor: pointer
   box-sizing: border-box
   transition: .25s ease-out
-
-  +respond-to(779px)
-    width: 100%
-    max-width: 300px
-    display: block
-    padding: 10px 12px
-    font-size: 10px
-    text-align: center
-    margin-top: 12px
+  color: #e53f36
+  border: 1px solid #fedfdd
 
   &:after
     content: ''
@@ -40,48 +33,28 @@ button
     width: 20px
     height: 20px
     margin-left: 10px
-    background: url('images/icons/btn-icon-green.svg') center no-repeat
+    background: url('images/icons/btn-icon-red.svg') center no-repeat
 
-    +respond-to(779px)
+    +respond-to($xsmall)
       display: none
 
   &:hover
-    background-image: linear-gradient(90deg,#b70a36 0,#e01d6d 100%)
+    background: #da3e2c
     color: #ffffff
     border: 1px solid transparent
     &:after
       background: url('images/icons/btn-icon-hover.svg') center no-repeat
+    .btn__main-text
+        border-bottom: none
+
+  +respond-to($xsmall)
+    width: 100%
+    max-width: 300px
+    display: block
+    padding: 10px 12px
+    font-size: 10px
+    text-align: center
+    margin-top: 12px
 
 .btn__main-text--red
   border-bottom: 1px solid rgba(218,149,44, .3)
-
-.section--at-risk
-  .btn__main
-    color: #e53f36
-    border: 1px solid #fedfdd
-
-    &:after
-      background: url('images/icons/btn-icon-red.svg') center no-repeat
-
-    &:hover
-      color: #ffffff
-      background: #da3e2c
-      &:after
-        background: url('images/icons/btn-icon-hover.svg') center no-repeat
-      .btn__main-text
-        border-bottom: none
-
-.section--secure
-  .btn__main
-    color: #6d8608
-    border: 1px solid #e2e7ce
-
-    .btn__main-text
-      border-bottom: 1px solid rgba(109,134,8,0.2)
-
-    &:hover
-      color: #ffffff
-      background: #6d8608
-
-      .btn__main-text
-        border-bottom: none

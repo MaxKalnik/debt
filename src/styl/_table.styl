@@ -1,44 +1,13 @@
-@import "_variable.styl"
-
-.section--table
-  .breadcrumbs
-    &__wrap
-      width: auto
-      margin-bottom: 45px
-      box-shadow: none
-
-    &__link
-      color: $main_color
-      letter-spacing: 0
-      line-height: 42px
-      text-decoration: underline
-      $ultraThin()
-      &:hover
-        text-decoration none
-        text-decoration-color: #A3DCF0
-
-    &__item
-      &:nth-child(3),
-      &:nth-child(4),
-      &:last-child
-        overflow: hidden
-        text-overflow: ellipsis
-
-      &:nth-child(3),
-      &:nth-child(4)
-        min-width: 45px
-
-      &:last-child
-        min-width: 75px
+@import "virtual/_variable.styl"
 
 .ranking-table
   width: 100%
   border-collapse: collapse
   border-radius: 5px
-  border: 1px solid #E6E6F2
+  border: 1px solid #fadfde
   border-top: none
   box-sizing: border-box
-  background-image: linear-gradient(90deg, #1F82E3 0%, #0C4BC2 100%)
+  background-image: linear-gradient(-90deg, #FB877C 0%, #F4625A 100%)
   thead
     th
       height: 46px
@@ -65,93 +34,25 @@
       box-sizing: border-box
       text-align: center
 
-      &:nth-child(3),
-      &:nth-child(4)
-        width: 16%
-
-
     tr
       background: #ffffff
-      border-bottom: 1px solid #e6eef2
+      border-bottom: 1px solid #fadfde
       &:nth-child(odd)
-        background: #f2f6f8
+        background: #fdf4f4
       &:last-child
         border-bottom: none
 
-.section--g-table,
-.section--h-table
-  border-radius: 5px
-  .rate-block
-    min-width: 61px
+.ranking-table.ranking-table--fixed
+  background-image: linear-gradient(-90deg, #F4625A 0%, #F4625A 100%)
 
-.section--table
-  .section__title
-    margin-bottom: 45px
-
-.section--g-table
-  .ranking-table
-    background-image: linear-gradient(-90deg, #1F82E3 0%, #0C4BC2 100%)
-
-  .ranking-table.ranking-table--fixed
-    background-image: linear-gradient(90deg, #0C4BC2 3%, #0D4EC4 100%)
-
-  .rate-block
-    background: #FC6960
-
-  tbody
-    tr
-      border-bottom: 1px solid #e8f2fc
-      &:nth-child(odd)
-        background: #f4f8fd
-
-
-  .btn-container
-    display: flex
-    justify-content: center
-    margin-top: 24px
-
-  .btn-go-back
-    display: inline-block
-    color: #1d7de0
-    border: 1px solid rgba(29, 125, 224,.2)
-    transition: .25s
-    &:hover
-      background: #1f82e3
-      color: #ffffff
-      border-color: #ffffff
-
-.section--h-table
-  .ranking-table
-    background-image: linear-gradient(-90deg, #39ADB6 0%, #30A0AB 100%)
-
-  .ranking-table.ranking-table--fixed
-    background-image: linear-gradient(-90deg, #30A0AB 0%, #30A0AB 100%)
-
-  .rate-block
-    background-image: linear-gradient(-90deg, #39ADB6 0%, #30A0AB 100%)
-
-  tbody
-    border-bottom: 1px solid #def3f4
-    tr
-      &:nth-child(odd)
-        background: #def3f4
-
-  .btn-go-back
-    color: #30a1ab
-    border: 1px solid #dbeef0
-    transition: .25s
-    &:hover
-      background: #30a1ab
-      color: #ffffff
-      border-color: #ffffff
-
-.mobile-only
-  .ranking-table--fixed
-    background: linear-gradient(90deg,#198dea 0,#2099ED 100%)
+.btn-container
+  display: flex
+  justify-content: center
+  margin-top: 24px
 
 .btn-go-back
+  display: inline-block
   color: #24A0EE
-  border: 1px solid #24A0EE
   border-radius: 5px
   padding: 12px 24px
   font-size: 12px
@@ -160,6 +61,7 @@
   text-transform: uppercase
   cursor: pointer
   transition: .25s
+  border: 1px solid rgba(29, 125, 224,.2)
   &:hover
     background: #24A0EE
     color: #ffffff
@@ -168,7 +70,7 @@
 .mobile-only
   display: none
 
-@media (max-width: 1019px)
++respond-to($small)
   .section--table
     .breadcrumbs__wrap
       white-space: nowrap
@@ -185,7 +87,7 @@
       td
         padding: 0 8px
 
-@media (max-width: 779px)
++respond-to($xsmall)
   .section--table
     margin-bottom: 30px
     .breadcrumbs__wrap
@@ -214,13 +116,12 @@
         padding: 0 8px
 
   .ranking-table.ranking-table--data
-    min-width: 500px
+    min-width: 290px
 
   .ranking-table.ranking-table--fixed
     width: 120px
     position: relative
     border-radius: 5px 0 0 0
-    background: #b70a36
     border-right: none
     box-shadow: 2px 0 13px 0 rgba(0,0,0,0.16)
 

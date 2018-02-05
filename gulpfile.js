@@ -47,6 +47,7 @@ gulp.task('inlineSVG', function () {
 gulp.task('stylus', function () {
     return gulp.src([
             dev_path.styl + '*.css',
+            dev_path.styl + 'virtual/*.css',
             dev_path.styl + 'index.styl'
         ])
         .pipe(stylus({
@@ -149,7 +150,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', [
-    'jade', 'copyhtml', 'stylus', 'js', 'images', 'browsersync-server', 'watch'
+    'jade', 'copyhtml', 'stylus', 'images', 'browsersync-server', 'watch'
 ]);
 
 gulp.task('prod', ['clean', 'copyhtml','stylus', 'images', 'js', 'inlinesource']);

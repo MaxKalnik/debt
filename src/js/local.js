@@ -57,54 +57,32 @@ $(document).ready(function () {
             });
         }
 
-    }
+    };
 
     topMenu();
     $(window).on('resize', function () {
         topMenu();
     });
 
-    body.on('click', '.graph-img__wrapper', function(event){
-        event.preventDefault();
-        if($(window).width() < 779) {
-            $(this).hasClass('graph-img__wrapper--grumpy') ? openPhotoSwipe(items1) : openPhotoSwipe(items2);
-        }
-        return false
-
+    body.on('focus', '#copyTarget', function(event){
+        $(this).select();
     });
 
-    function btnClick(elem, initColor, ultColor) {
-      body.on('mousedown', elem, function(event){
-        event.preventDefault();
-        $(this).css('background', initColor);
-
-        return false
-
-      });
-
-      body.on('mouseup', elem, function(event){
-          event.preventDefault();
-          $(this).css('background', ultColor);
-
-          return false
-
-      });
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
     };
 
-    body.on('focus', '#copyTarget', function(event){
-          $(this).select();
+    body.on('click', '#copyButton', function() {
+        copyToClipboard($('#copyTarget'));
+
     });
 
-});
+    body.on('click', '.map__btn', function() {
+        openPhotoSwipe(items);
+    });
 
-function copyToClipboard(element) {
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val($(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
-}
-
-document.getElementById("copyButton").addEventListener("click", function() {
-    copyToClipboard(document.getElementById("copyTarget"));
 });

@@ -19,17 +19,17 @@ body
         section.section.section--upper
           include ./partials/upper.jade
 
-        section.section.section--k-findings
-          include ./partials/k-findings.jade
+        section.section.section--wide
+          include ./partials/states.jade
 
-        section.section.section--map.section--at-risk
+        section.section.section--map
           include ./partials/map.jade
 
-        section.section.section--at-risk.section--wide
-          include ./partials/at-risk.jade
+        section.section.section--companies
+          include ./partials/companies.jade
 
-        section.section.section--secure.section--wide
-          include ./partials/secure.jade
+        section.section.section--tips
+          include ./partials/tips.jade
 
         section.section.section--methodology
           include ./partials/methodology.jade
@@ -41,4 +41,9 @@ body
 
     include ./partials/footer.jade
 
-  script(type='text/javascript', src='js/script.min.js')
+  script(type='text/javascript', src='js/jquery-1.11.1.min.js')
+  script(type='text/javascript', src='js/photoswipe-ui-default.js')
+  script(type='text/javascript', src='js/photoswipe.js')
+  script(type='text/javascript', src='js/jquery.iframetracker.js')
+  script(type='text/javascript', src='js/local.js')
+  script(type='text/javascript', src='js/pswp.js')

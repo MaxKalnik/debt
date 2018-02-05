@@ -8,49 +8,37 @@
   &:last-child
     margin-bottom: 0
 
-  +respond-to(779px)
+  +respond-to($xsmall)
+    display: flex
+    flex-direction: column
     margin-bottom: 32px
     &:last-child
       margin-bottom: 0
-
-.rankings__item-header
-  display: flex
-  align-items: center
-  width: 100%
-  margin-left: 80px
-  margin-bottom: 18px
-
-  +respond-to(779px)
-    order: 2
-    margin-left: 0
-
-  .rate-block
-    width: 78px
-    margin-right: 16px
-    padding-left: 25px
-    text-align: center
 
 .rankings__item-title
   font-size: 24px
   line-height: 32px
   font-weight: 600
+  margin-bottom: 16px
+
+  +respond-to($xsmall)
+    text-align: center
 
 .rankings__wrapper
   width: 800px
   margin: 0 auto
 
-  +respond-to(1019px)
-    width: 620px
+  +respond-to($small)
+    width: 690px
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     width: calc(100% - 24px)
 
 .rankings__item-num-block
   width: 67px
-  margin-right: 13px
+  margin-right: 12px
 
-  +respond-to(779px)
-    order: 1
+  +respond-to($xsmall)
     width: auto
     margin: 0 auto 16px auto
 
@@ -59,42 +47,132 @@
   line-height: 64px
   font-weight: 700
   text-align: right
+  color: rgba(218, 62, 44, .2)
 
 .rankings__item-text
-  width: 720px
+  width: $rankings_item-table-width
   @extend .main-text
 
-  +respond-to(1019px)
-    width: 540px
+  +respond-to($small)
+    width: $rankings_item-table-tab-width
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     width: 100%
     order: 3
 
-.section--at-risk
-  .rankings__item-num
-    color: rgba(218, 62, 44, .2)
+.rankings__item-table
+  width: $rankings_item-table-width
+  display: flex
+  flex-direction: row
+  border: 1px solid #fcd2cf
+  margin-bottom: 16px
+  box-sizing: border-box
 
-  .rate-block
-    &:before
-      content: ""
-      position: absolute
-      left: 8px
-      top: 6px
-      width: 12px
-      height: 17px
-      background: url(images/svg/lock-red.svg)
+  +respond-to($small)
+    width: $rankings_item-table-tab-width
 
-.section--secure
-  .rankings__item-num
-    color: rgba(128, 160, 0, .2)
+  +respond-to($xsmall)
+    width: $rankings_item-table-mob-width
+    flex-direction: column
+    box-sizing: content-box
+    margin: 0 auto 16px auto
 
-  .rate-block
-    &:before
-      content: ""
-      position: absolute
-      left: 8px
-      top: 6px
-      width: 12px
-      height: 17px
-      background: url(images/svg/lock-green.svg)
+.rankings__item-table-cell
+  height: 58px
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 24px
+  border-right: 1px solid #fcd2cf
+  box-sizing: border-box
+  &:last-child
+    border-right: none
+
+  &:nth-child(1)
+    width: 27%
+
+  &:nth-child(2)
+    width: 38%
+
+  &:nth-child(3)
+    width: 35%
+
+  +respond-to($small)
+    padding: 12px
+
+    &:nth-child(1)
+      width: 30%
+
+    &:nth-child(2)
+      width: 34%
+
+    &:nth-child(3)
+      width: 35%
+
+  +respond-to($xsmall)
+    padding: 16px 24px
+    border-right: none
+    border-bottom: 1px solid #fcd2cf
+
+    &:nth-child(1)
+      width: $rankings_item-table-mob-width
+
+    &:nth-child(2)
+      width: $rankings_item-table-mob-width
+
+    &:nth-child(3)
+      width: $rankings_item-table-mob-width
+      border-bottom: none
+
+.rankings__item-table-cell--first
+  &:before
+    content: ''
+    min-width: 18px
+    height: 16px
+    background: url(images/svg/icon_complaints.svg) center no-repeat
+    background-size: cover
+    margin-right: 12px
+
+.rankings__item-table-cell--second
+  &:before
+    content: ''
+    min-width: 16px
+    height: 16px
+    background: url(images/svg/icon_top_offender.svg) center no-repeat
+    background-size: cover
+    margin-right: 14px
+
+.rankings__item-table-cell--third
+  &:before
+    content: ''
+    min-width: 16px
+    height: 16px
+    background: url(images/svg/icon_runner-up.svg) center no-repeat
+    background-size: cover
+    margin-right: 14px
+
+.rankings__item-table-text
+  font-size: 10px
+  line-height: 14px
+  font-weight: 700
+  color: #848586
+  text-transform: uppercase
+  margin-right: 14px
+
+  +respond-to($xsmall)
+    width: 70px
+
+.rankings__item-table-text--runner-up
+  min-width: 72px
+
+  +respond-to($small)
+    min-width: 65px
+
+  +respond-to($xsmall)
+    min-width: auto
+
+.rankings__item-table-value
+  font-size: 10px
+  line-height: 14px
+  font-weight: 700
+  text-transform: uppercase

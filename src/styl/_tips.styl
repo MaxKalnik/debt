@@ -1,0 +1,70 @@
+.tips
+  position: relative
+  display: flex
+  align-items: center
+
+  +respond-from($large)
+    justify-content: space-between
+
+  +respond-to($xsmall)
+    flex-direction: column
+
+.tips__img-wrapper
+  margin-right: 79px
+
+  +respond-from($large)
+    margin-right: 97px
+
+  +respond-to($medium)
+    margin-right: 16px
+
+  +respond-to($xsmall)
+    margin-bottom: 31px
+
+.tips__list
+  +respond-to(1849px)
+    margin-top: 15px
+    padding-right: 50px
+
+  +respond-to($medium)
+    margin-top: 0
+    padding-right: 0
+
+  +respond-to($small)
+    padding-right: 10px
+
+  +respond-to($xsmall)
+    padding-right: 0
+
+.tips__list-item
+  position: relative
+  padding-left: 42px
+  margin-bottom: 32px
+
+  &:last-child
+    margin-bottom: 0
+
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 8px
+    width: 10px
+    height: 10px
+    background: url(images/svg/bullet-white.svg)
+
+  +respond-to($medium)
+    margin-bottom: 24px
+
+    &:last-child
+      margin-bottom: 0
+
+  +respond-to($small)
+    padding-left: 24px
+
+  +respond-to($xsmall)
+    padding-left: 22px
+
+.tips__list-item-text
+  @extend .main-text
+  color: #ffffff

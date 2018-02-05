@@ -1,4 +1,4 @@
-@import "_variable.styl"
+@import "virtual/_variable.styl"
 
 .page-header
   height: 60px
@@ -18,13 +18,13 @@
   padding-bottom: 14px
 
 .top-logo
-  +respond-to(779px)
+  +respond-to($xsmall)
     display: none
 
 .mob-logo
   display: none
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     display: block
     width: 35px
     height: 38px
@@ -55,7 +55,7 @@
     &:after
       width: 100%
 
-  +respond-to(1019px)
+  +respond-to($small)
     margin: 0 10px
 
 .button

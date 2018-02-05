@@ -1,37 +1,153 @@
-h2.section__title Map of the at-risk and secure States
+h2.section__title Map
 
-p.info-text
-  | Note that the highest rates of credit card fraud and identity theft (adjusted for severity of financial losses) are concentrated in the South and Southwest, with additional hotspots in Illinois, Virginia and Michigan.
+.map__wrapper
+  h3.map__title
+    | Illegal Debt Collections Complaint Incidence Rates by State (per 100,000)
 
-.frame-wrapper
-  iframe(src='https://www.rewardexpert.com/shared/staging/fraud-map/' width = "1130px", height = 'auto', frameborder="0", scrolling = "no")
+  .frame-wrapper.frame-wrapper--g-map
+    iframe(src='https://static0.rewardexpert.com/shared/staging/debt-map-by-state/' width = "1130px", height = 'auto', frameborder="0", scrolling = "no")
 
-.map__user-block
-  .map__btn-wrapper.map__btn-wrapper--share
-    button.map__btn.map__btn--share
-      span.map__btn-text
-        | Share
+  .map__user-block
+    .map__btn-wrapper.map__btn-wrapper--share
+      button.map__btn.map__btn--share
+        span.map__btn-text
+          | Share
 
-    .map__btn-container.map__btn-container--share
-      .map__btn-socials
-        a.map__btn-socials-item.map__btn-socials-item--fb(href="")
-          img.socials-logo(src="images/svg/fb-share.svg")
+      .map__btn-container.map__btn-container--share
+        .map__btn-socials
+          a.map__btn-socials-item.map__btn-socials-item--fb(href="")
+            img.socials-logo(src="images/svg/fb-share.svg")
 
-        a.map__btn-socials-item.map__btn-socials-item--tw(href="")
-          img.socials-logo(src="images/svg/tw-share.svg")
+          a.map__btn-socials-item.map__btn-socials-item--tw(href="")
+            img.socials-logo(src="images/svg/tw-share.svg")
 
-        a.map__btn-socials-item.map__btn-socials-item--go(href="")
-          img.socials-logo(src="images/svg/go-share.svg")
+          a.map__btn-socials-item.map__btn-socials-item--go(href="")
+            img.socials-logo(src="images/svg/go-share.svg")
 
-  .map__btn-wrapper.map__btn-wrapper--embed
-    button.map__btn.map__btn--embed
-      span.map__btn-text
-        | Embed
+    .map__btn-wrapper.map__btn-wrapper--embed
+      button.map__btn.map__btn--embed
+        span.map__btn-text
+          | Embed
 
-    .map__btn-container.map__btn-container--embed
-      .map__btn-embed
-        textarea.map__btn-embed-text#copyTarget(autofocus='', readonly='')
-          | <iframe src="https://www.rewardexpert.com/shared/staging/fraud-map/" width="1130px" height="auto" frameborder="0" scrolling="no"></iframe>
+      .map__btn-container.map__btn-container--embed
+        .map__btn-embed
+          textarea.map__btn-embed-text#copyTarget(autofocus='', readonly='')
+            | <iframe src="https://static0.rewardexpert.com/shared/staging/debt-map-by-state/" width="1130px" height="auto" frameborder="0" scrolling="no"></iframe><div style="width:100%;text-align:right;font-size:14px;color:#0a0c0d;margin-bottom:16px;">Source: <a style="color:#2093cd;" href="https://www.rewardexpert.com/blog/studies/which-u-s-states-are-home-to-the-grumpiest-and-happiest-travelers/">RewardExpert Blog</a></div>
 
-        button.map__btn-embed-copy#copyButton
-          | copy to clipboard
+          button.map__btn-embed-copy#copyButton
+            | copy to clipboard
+
+.map__wrapper
+  h3.map__title
+    | Illegal Debt Collections Complaint Incidence Rates by 3-digit Zip Code Area
+
+  .frame-wrapper(id='frame-zip')
+    iframe(src='https://static0.rewardexpert.com/shared/staging/debt-map-zip/' width = "1130px", height = 'auto', frameborder="0", scrolling = "no")
+
+  .map__user-block
+    .map__btn-wrapper.map__btn-wrapper--share
+      button.map__btn.map__btn--share
+        span.map__btn-text
+          | Share
+
+      .map__btn-container.map__btn-container--share
+        .map__btn-socials
+          a.map__btn-socials-item.map__btn-socials-item--fb(href="")
+            img.socials-logo(src="images/svg/fb-share.svg")
+
+          a.map__btn-socials-item.map__btn-socials-item--tw(href="")
+            img.socials-logo(src="images/svg/tw-share.svg")
+
+          a.map__btn-socials-item.map__btn-socials-item--go(href="")
+            img.socials-logo(src="images/svg/go-share.svg")
+
+    .map__btn-wrapper.map__btn-wrapper--embed
+      button.map__btn.map__btn--embed
+        span.map__btn-text
+          | Embed
+
+      .map__btn-container.map__btn-container--embed
+        .map__btn-embed
+          textarea.map__btn-embed-text#copyTarget(autofocus='', readonly='')
+            | <iframe src="https://static0.rewardexpert.com/shared/staging/debt-map-zip/" width="1130px" height="auto" frameborder="0" scrolling="no"></iframe><div style="width:100%;text-align:right;font-size:14px;color:#0a0c0d;margin-bottom:16px;">Source: <a style="color:#2093cd;" href="https://www.rewardexpert.com/blog/studies/which-u-s-states-are-home-to-the-grumpiest-and-happiest-travelers/">RewardExpert Blog</a></div>
+
+          button.map__btn-embed-copy#copyButton
+            | copy to clipboard
+
+.map__wrapper
+  h3.map__title
+    | Illegal Collection Attempts Top Offenders by State
+
+  .frame-wrapper(id='frame-offenders')
+    iframe(src='https://static0.rewardexpert.com/shared/staging/debt-map-offenders/' width = "1130px", height = 'auto', frameborder="0", scrolling = "no")
+
+  .map__user-block
+    .map__btn-wrapper.map__btn-wrapper--share
+      button.map__btn.map__btn--share
+        span.map__btn-text
+          | Share
+
+      .map__btn-container.map__btn-container--share
+        .map__btn-socials
+          a.map__btn-socials-item.map__btn-socials-item--fb(href="")
+            img.socials-logo(src="images/svg/fb-share.svg")
+
+          a.map__btn-socials-item.map__btn-socials-item--tw(href="")
+            img.socials-logo(src="images/svg/tw-share.svg")
+
+          a.map__btn-socials-item.map__btn-socials-item--go(href="")
+            img.socials-logo(src="images/svg/go-share.svg")
+
+    .map__btn-wrapper.map__btn-wrapper--embed
+      button.map__btn.map__btn--embed
+        span.map__btn-text
+          | Embed
+
+      .map__btn-container.map__btn-container--embed
+        .map__btn-embed
+          textarea.map__btn-embed-text#copyTarget(autofocus='', readonly='')
+            | <iframe src="https://static0.rewardexpert.com/shared/staging/debt-map-offenders/" width="1130px" height="auto" frameborder="0" scrolling="no"></iframe><div style="width:100%;text-align:right;font-size:14px;color:#0a0c0d;margin-bottom:16px;">Source: <a style="color:#2093cd;" href="https://www.rewardexpert.com/blog/studies/which-u-s-states-are-home-to-the-grumpiest-and-happiest-travelers/">RewardExpert Blog</a></div>
+
+          button.map__btn-embed-copy#copyButton
+            | copy to clipboard
+
+.map__wrapper
+  h3.map__title
+    | Illegal Collection Attempts Runners-Up by State
+
+  .frame-wrapper(id='frame-runners-up')
+    iframe(src='https://static0.rewardexpert.com/shared/staging/debt-map-runners-up/' width = "1130px", height = 'auto', frameborder="0", scrolling = "no")
+
+  .map__user-block
+    .map__btn-wrapper.map__btn-wrapper--share
+      button.map__btn.map__btn--share
+        span.map__btn-text
+          | Share
+
+      .map__btn-container.map__btn-container--share
+        .map__btn-socials
+          a.map__btn-socials-item.map__btn-socials-item--fb(href="")
+            img.socials-logo(src="images/svg/fb-share.svg")
+
+          a.map__btn-socials-item.map__btn-socials-item--tw(href="")
+            img.socials-logo(src="images/svg/tw-share.svg")
+
+          a.map__btn-socials-item.map__btn-socials-item--go(href="")
+            img.socials-logo(src="images/svg/go-share.svg")
+
+    .map__btn-wrapper.map__btn-wrapper--embed
+      button.map__btn.map__btn--embed
+        span.map__btn-text
+          | Embed
+
+      .map__btn-container.map__btn-container--embed
+        .map__btn-embed
+          textarea.map__btn-embed-text#copyTarget(autofocus='', readonly='')
+            | <iframe src="https://static0.rewardexpert.com/shared/staging/debt-map-runners-up/" width="1130px" height="auto" frameborder="0" scrolling="no"></iframe><div style="width:100%;text-align:right;font-size:14px;color:#0a0c0d;margin-bottom:16px;">Source: <a style="color:#2093cd;" href="https://www.rewardexpert.com/blog/studies/which-u-s-states-are-home-to-the-grumpiest-and-happiest-travelers/">RewardExpert Blog</a></div>
+
+          button.map__btn-embed-copy#copyButton
+            | copy to clipboard
+
+.btn__container
+  a.btn__main(href='/debt-full.html')
+    span.btn__main-text.btn__main-text--red Click here for the full ranking

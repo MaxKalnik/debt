@@ -1,4 +1,4 @@
-@import "_variable.styl"
+@import "virtual/_variable.styl"
 
 body
   font-family: Whitney SSm A, sans-serif
@@ -15,17 +15,17 @@ ul,li
   margin: 0 auto
   position relative
 
-  +respond-from(1850px)
+  +respond-from($large)
     width: 1360px
 
-  +respond-to(1439px)
+  +respond-to($medium)
     width: 980px
 
-  +respond-to(1019px)
+  +respond-to($small)
     width: auto
     max-width: 740px
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     margin-left: 10px
     margin-right: 10px
 
@@ -38,7 +38,7 @@ ul,li
   background-repeat no-repeat, repeat-x, repeat-x
   background-size: auto, auto, auto
 
-  +respond-from(1850px)
+  +respond-from($large)
     background-image url(images/footer_bg.png), url(images/svg/clouds_bg.svg) , none, linear-gradient(-180deg, #34c4f0 0, #1c90e2 100%)
 
 .under-title__text
@@ -98,16 +98,40 @@ ul,li
 
 .frame-wrapper
   position:relative
-  padding-bottom:64%
+  padding-bottom:50%
   padding-top:30px
   height:0
   overflow:hidden
 
-  +respond-to(779px)
-    padding-bottom: 66%
+  +respond-from($large)
+    padding-bottom: 48%
+
+  +respond-to($medium)
+    padding-bottom: 55%
+
+  +respond-to($small)
+    padding-bottom: 65%
+
+  +respond-to($xsmall)
+    padding-bottom: 69%
 
   +respond-to(567px)
-    padding-bottom: 70%
+    padding-bottom: 66%
+
+.frame-wrapper--g-map
+  padding-bottom:67%
+
+  +respond-to($medium)
+    padding-bottom: 81%
+
+  +respond-to($small)
+    padding-bottom: 85%
+
+  +respond-to($xsmall)
+    padding-bottom: 80%
+
+  +respond-to(567px)
+    padding-bottom: 92%
 
 .frame-wrapper iframe
   position:absolute
@@ -116,7 +140,7 @@ ul,li
   width:100%
   height:100%
 
-+respond-to(779px)
++respond-to($xsmall)
   .mobile-table
     width: 100%
     margin-bottom: 16px

@@ -1,4 +1,4 @@
-@import "_mixins.styl"
+@import "virtual/_mixins.styl"
 
 .main-block
   position: relative
@@ -16,11 +16,11 @@
   background-image: url('images/main_pic.png')
   background-image: -webkit-image-set(url(images/main_pic.png) 1x, url(images/main_pic@2x.png) 2x)
 
-  +respond-from(1850px)
+  +respond-from($large)
     padding: 32px 60px 34px 60px
     background-position center
 
-  +respond-to(1439px)
+  +respond-to($medium)
     height: 568px
     background-image url("images/main_pic_1020.png")
     background-image: -webkit-image-set(url(images/main_pic_1020.png) 1x, url(images/main_pic_1020@2x.png) 2x)
@@ -28,18 +28,17 @@
     background-position center
     padding: 32px 45px 45px 25px
 
-  +respond-to(1019px)
+  +respond-to($small)
     padding: 32px 25px 42px 25px
     background-image url("images/main_pic_780.png")
     background-image: -webkit-image-set(url(images/main_pic_780.png) 1x, url(images/main_pic_780@2x.png) 2x)
     background-position center
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     height: 454px
     padding: 16px 12px 36px 12px
 
   +respond-to(494px)
-    background-size: contain
     background-position: top
 
 .main-block__mask
@@ -50,20 +49,18 @@
   height: 568px
   background-image: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
 
-  +respond-to(1439px)
+  +respond-to($medium)
     background: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
 
-  +respond-to(1019px)
+  +respond-to($small)
     height: 568px
     background: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     height: 270px
-    background: linear-gradient(-179deg, rgba(0,0,0,0.00) 25%, rgba(1,4,5,0.90) 51%, #05131A 100%)
 
   +respond-to(494px)
     height: 405px
-    background-image: linear-gradient(-179deg, rgba(0,0,0,0.00) 25%, rgba(1,4,5,0.90) 46%, #05131A 100%)
 
 .main-block__text
   margin-top: auto
@@ -76,21 +73,21 @@
   font-weight: 600
   margin-bottom: 12px
 
-  +respond-from(1850px)
+  +respond-from($large)
     margin-bottom: 24px
 
-  +respond-to(1439px)
+  +respond-to($medium)
     font-size: 38px
     font-weight: 600
     margin-bottom: 21px
 
-  +respond-to(1019px)
+  +respond-to($small)
     font-size: 31px
     line-height: 39px
     font-weight: 600
     margin-bottom: 12px
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     font-size: 22px
     line-height: 30px
     font-weight: 600
@@ -102,29 +99,39 @@
   font-weight: 300
   margin-bottom: 36px
 
-  +respond-from(1850px)
+  +respond-from($large)
     margin-bottom: 28px
 
-  +respond-to(1439px)
+  +respond-to($medium)
     font-size: 24px
     line-height: 30px
     font-weight: 300
     margin-bottom: 46px
 
-  +respond-to(1019px)
+  +respond-to($small)
     width: 650px
     font-size: 22px
     line-height: 32px
     font-weight: 300
     margin-bottom: 36px
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     min-width: 265px
     width: auto
     font-size: 16px
     line-height: 24px
     font-weight: 300
     margin-bottom: 12px
+
+.main-block__text-item-mob-hidden
+  +respond-to($xsmall)
+    display: none
+
+.main-block__text-item-mob-only
+  display: none
+
+  +respond-to($xsmall)
+    display: inline
 
 .main-block__author
   position: relative
@@ -143,17 +150,17 @@
     background-image: url(images/icons/author.svg)
     background-repeat: no-repeat
 
-  +respond-to(1439px)
+  +respond-to($medium)
     font-size: 12px
     line-height: 16px
     font-weight: 300
 
-  +respond-to(1019px)
+  +respond-to($small)
     font-size: 12px
     line-height: 16px
     font-weight: 300
 
-  +respond-to(779px)
+  +respond-to($xsmall)
     font-size: 12px
     line-height: 16px
     font-weight: 300
