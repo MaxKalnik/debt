@@ -14,15 +14,15 @@ button
   font-size: 12px
   line-height: 26px
   font-weight: 600
+  color: #ffffff
   text-transform: uppercase
-  color: #0e5bb5
   border-radius: 5px
   padding: 14px 24px
-  border: 1px solid #d31858
+  border: 1px solid transparent
   cursor: pointer
   box-sizing: border-box
   transition: .25s ease-out
-  border: 1px solid rgba(14, 91, 181, .3)
+  background: #0e5bb5
 
   &:after
     content: ''
@@ -32,19 +32,19 @@ button
     width: 20px
     height: 20px
     margin-left: 10px
-    background: url('images/icons/btn-icon.svg') center no-repeat
+    background: url('images/icons/btn-icon-hover.svg') center no-repeat
 
     +respond-to($xsmall)
       display: none
 
   &:hover
-    background: #0e5bb5
-    color: #ffffff
-    border: 1px solid transparent
+    background: #ffffff
+    color: #0e5bb5
+    border: 1px solid rgba(14, 91, 181, .3)
     &:after
-      background: url('images/icons/btn-icon-hover.svg') center no-repeat
+      background: url('images/icons/btn-icon.svg') center no-repeat
     .btn__main-text
-      border-bottom: none
+      border-bottom: 1px solid rgba(14, 91, 181, .3)
 
   +respond-to($xsmall)
     width: 100%

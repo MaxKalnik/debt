@@ -1,7 +1,11 @@
 .map__wrapper
   margin-bottom: 100px
-  &:last-child
-    margin-bottom: 0
+
+.map__wrapper--last
+  margin-bottom: 64px
+
+  +respond-to($xsmall)
+    margin-bottom: 44px
 
 .map__title
   font-size: 24px
@@ -86,10 +90,10 @@
   position: absolute
   visibility: hidden
   top: 75px
-  left: -10px
+  left: -20px
 
   +respond-to($xsmall)
-    top: 55px
+    top: 65px
 
 .map__btn-socials
   position: relative
@@ -116,8 +120,8 @@
   display: flex
   justify-content: center
   align-items: center
-  width: 24px
-  height: 24px
+  width: 32px
+  height: 32px
   border-radius: 50%
   box-sizing: border-box
   margin-right: 12px
@@ -126,19 +130,19 @@
     margin-right: 0
 
 .map__btn-socials-item--fb
-  border: 1px solid #3d5e96
+  border: 1px solid #cdd5e4
 
   &:hover
     background: #eaeef4
 
 .map__btn-socials-item--tw
-  border: 1px solid #46ade9
+  border: 1px solid #cfeaf9
 
   &:hover
     background: #e5f3fd
 
 .map__btn-socials-item--go
-  border: 1px solid #ccd8e7
+  border: 1px solid #fee4e2
 
   &:hover
     background: #feecec
