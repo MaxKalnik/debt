@@ -15,15 +15,14 @@ button
   line-height: 26px
   font-weight: 600
   text-transform: uppercase
-  color: #d31858
+  color: #0e5bb5
   border-radius: 5px
   padding: 14px 24px
   border: 1px solid #d31858
   cursor: pointer
   box-sizing: border-box
   transition: .25s ease-out
-  color: #e53f36
-  border: 1px solid #fedfdd
+  border: 1px solid rgba(14, 91, 181, .3)
 
   &:after
     content: ''
@@ -33,19 +32,19 @@ button
     width: 20px
     height: 20px
     margin-left: 10px
-    background: url('images/icons/btn-icon-red.svg') center no-repeat
+    background: url('images/icons/btn-icon.svg') center no-repeat
 
     +respond-to($xsmall)
       display: none
 
   &:hover
-    background: #da3e2c
+    background: #0e5bb5
     color: #ffffff
     border: 1px solid transparent
     &:after
       background: url('images/icons/btn-icon-hover.svg') center no-repeat
     .btn__main-text
-        border-bottom: none
+      border-bottom: none
 
   +respond-to($xsmall)
     width: 100%
@@ -57,4 +56,4 @@ button
     margin-top: 12px
 
 .btn__main-text--red
-  border-bottom: 1px solid rgba(218,149,44, .3)
+  border-bottom: 1px solid rgba(14, 91, 181, .3)

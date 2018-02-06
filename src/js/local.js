@@ -31,7 +31,7 @@ $(document).ready(function () {
         }
     });
 
-    body.mouseup(function(event) {
+    body.onclick(function(event) {
         if ($('.map__btn-wrapper').has(event.target).length === 0) {
             $('.map__btn-container').removeClass('visible');
         }
@@ -77,6 +77,11 @@ $(document).ready(function () {
     };
 
     body.on('click', '#copyButton', function() {
+        copyToClipboard($('#copyTarget'));
+
+    });
+
+    body.on('tap', '#copyButton', function() {
         copyToClipboard($('#copyTarget'));
 
     });
