@@ -31,7 +31,7 @@ $(document).ready(function () {
         }
     });
 
-    body.onclick(function(event) {
+    body.mouseup(function(event) {
         if ($('.map__btn-wrapper').has(event.target).length === 0) {
             $('.map__btn-container').removeClass('visible');
         }
@@ -81,13 +81,20 @@ $(document).ready(function () {
 
     });
 
-    body.on('tap', '#copyButton', function() {
-        copyToClipboard($('#copyTarget'));
-
+    $('#frame-zip').iframeTracker({
+        blurCallback: function(){
+            openPhotoSwipe(items[0]);
+        }
     });
-
-    body.on('click', '.map__btn', function() {
-        openPhotoSwipe(items);
+     $('#frame-offenders').iframeTracker({
+        blurCallback: function(){
+            openPhotoSwipe(items[1]);
+        }
+    });
+      $('#frame-runners-up').iframeTracker({
+        blurCallback: function(){
+            openPhotoSwipe(items[2]);
+        }
     });
 
 });

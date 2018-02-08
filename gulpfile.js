@@ -150,7 +150,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', [
-    'jade', 'copyhtml', 'stylus', 'images', 'browsersync-server', 'watch'
+    'jade', 'copyhtml', 'js', 'stylus', 'images', 'browsersync-server', 'watch'
 ]);
 
 gulp.task('prod', ['clean', 'copyhtml','stylus', 'images', 'js', 'inlinesource']);
